@@ -1,15 +1,24 @@
 import React from 'react';
+import Details from './details.jsx'
+
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {}
   }
 
   render() {
-    return (<h1>Hello</h1>)
+    return (
+      <div>
+        <h2>About this Item</h2>
+        <ul>
+        <Details />
+        </ul>
+      </div>
+    )
   }
-  
+
 }
 
 export default App;
