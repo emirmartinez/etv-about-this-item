@@ -22,15 +22,31 @@ const find = (query, callback) => {
     })
 }
 
-
+const findAll = (callback) => {
+  Item.find({})
+    .then((data) => {
+      const items = data.map((item) => (
+        item.toObject()
+      ))
+      callback(null, items)
+    })
+}
 
 const save = (data, callback) => {
   const items = []
 
-  data.forEach(element => {
+  data.forEach((element) => {
+    var item = new Item()
     item = Object.assign(item, element);
     items.push(item)
-  });
+  })
+  Item.insertMany(items, (err, docs) => {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, docs)
+    }
+  })
 };
 
 const drop = () => {
@@ -38,10 +54,9 @@ const drop = () => {
 }
 
 module.exports.find = find
+module.exports.findAll = findAll
 module.exports.drop = drop
 module.exports.save = save
-module.exports = Item
 
-///commment
 
 
