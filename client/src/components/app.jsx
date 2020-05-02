@@ -5,7 +5,7 @@ import Details from './details.jsx'
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {props}
   }
 
   render() {
@@ -13,7 +13,7 @@ class App extends React.Component {
       <div>
         <h2>About this Item</h2>
         <ul>
-        <Details />
+        <Details data={this.state} />
         </ul>
       </div>
     )
