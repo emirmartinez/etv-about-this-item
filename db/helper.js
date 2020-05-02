@@ -72,7 +72,6 @@ const dataGenerator = () => {
   let count = 0;
   while (count < 5) {
    var obj = {
-     itemId: count,
     'Fit & style': [fitStyle[getRandomInt(8)], fitStyle[getRandomInt(8)], fitStyle[getRandomInt(8)]],
     'Description': description[getRandomInt(10)],
     'Sizing': 'Men',
