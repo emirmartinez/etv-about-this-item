@@ -32,13 +32,13 @@ const findAll = (callback) => {
     })
 }
 
-const save = (data, callback) => {
-  const items = []
+const save = (product, callback) => {
+  const items = [];
 
-  data.forEach((element) => {
+  product.forEach((element) => {
     var item = new Item()
-    item = Object.assign(item, element);
-    items.push(item)
+    var newItem = Object.assign(item, element);
+    items.push(newItem)
   })
   Item.insertMany(items, (err, docs) => {
     if (err) {
@@ -57,6 +57,7 @@ module.exports.find = find
 module.exports.findAll = findAll
 module.exports.drop = drop
 module.exports.save = save
+
 
 
 

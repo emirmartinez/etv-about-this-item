@@ -15,7 +15,6 @@ module.exports = {
     'TCIN': Number,
     'UPC': Number,
     'Item Number (DPCI)': Number,
-    'Size charts': String,
     "Shipping options": String,
     'Shipping details': String,
     'Return details': String,
