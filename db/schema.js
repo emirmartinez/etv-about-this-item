@@ -1,7 +1,5 @@
 module.exports = {
-  details: {
-    'id': Number,
-    'Fit & style': String,
+    'Fit & style': Array,
     'Description': String,
     'Sizing': String,
     'Material': String,
@@ -19,7 +17,6 @@ module.exports = {
     'Shipping details': String,
     'Return details': String,
     'Q&A': Array
-  }
 }
   //Example [{Question: 'what does it come with', username: Jaicee, date: 8, answers: [{answer:Just the switch and the charging cable}, ...] 
  

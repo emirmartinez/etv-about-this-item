@@ -70,7 +70,7 @@ var name = ['John', 'Steve', 'Amy', "Maria", 'Brian', 'Richie', 'Alice', 'Tony']
 const dataGenerator = () => {
   let data = []
   let count = 0;
-  while (count < 5) {
+  while (count < 10) {
    var obj = {
     'Fit & style': [fitStyle[getRandomInt(8)], fitStyle[getRandomInt(8)], fitStyle[getRandomInt(8)]],
     'Description': description[getRandomInt(10)],
