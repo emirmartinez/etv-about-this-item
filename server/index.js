@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/product/id', (req, res) => {
+app.get('/product/:id', (req, res) => {
   db.find(req.params.id, (err, data) => {
     if (err) {
       res.status(500)
@@ -23,6 +23,16 @@ app.get('/product/id', (req, res) => {
 
 app.post('/', (req, res) => {
   db.save(req.body, (err) => {
+    if (err) {
+      res.status(500)
+    } else {
+      res.status(200)
+    }
+  })
+})
+
+app.get('/', (req, res) => {
+  db.findAll((err, data) => {
     if (err) {
       res.status(500)
     } else {
