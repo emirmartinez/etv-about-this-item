@@ -11,12 +11,12 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/product/:id', (req, res) => {
+app.get('/item/:id', (req, res) => {
   db.find(req.params.id, (err, data) => {
     if (err) {
       res.status(500)
     } else {
-      res.status(200)
+      res.json(data)
     }
   })
 })
@@ -31,12 +31,12 @@ app.post('/', (req, res) => {
   })
 })
 
-app.get('/', (req, res) => {
+app.get('/items', (req, res) => {
   db.findAll((err, data) => {
     if (err) {
       res.status(500)
     } else {
-      res.status(200)
+      res.json(data)
     }
   })
 })
