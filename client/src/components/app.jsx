@@ -1,20 +1,18 @@
 import React from 'react';
-import Details from './details.jsx'
-
+import Tabs from './tabs.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {props}
+    this.state = { props }
   }
 
   render() {
+   
     return (
-      <div>
-        <h2>About this Item</h2>
-        <ul>
-        <Details data={this.state} />
-        </ul>
+      <div className='mainDiv'>
+        <h2 className='about'>About this item</h2>
+        <Tabs data={this.props.data} />
       </div>
     )
   }
