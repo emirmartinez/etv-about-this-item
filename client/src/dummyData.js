@@ -1,6 +1,6 @@
 module.exports = {
   details: {
-    'Fit & style': ['Mandalorian graphic tee has a cool and fun design', 'Features a 4-panel graphic of baby Yoda with cute facial expressions', 'Made with 100% cotton for ultimate softness and durability'],
+    'Fit & style': ['Mandalorian graphic tee has a cool and fun design', 'Features a 4-panel graphic of baby Yoda with cute facial expressions', 'Made with 100% cotton for ultimate softness and durability', 'Perfect for wearing for movie binges or theater premiers'],
     'Description': `This Star Wars The Mandalorian Child Short-Sleeve Graphic T-Shirt makes it easy for you to show off your love for the cutest creature in the galaxy. A black tee features a four-panel graphic print of The Child with different adorable facial expressions for a fun way to put your love for the epic Star Wars show on display. Whether you're binge watching the entire first season or anxiously waiting for season two, this baby Yoda shirt lets you enjoy your favorite galactic saga on any of your casual off-duty days.`,
     'Sizing': 'Men',
     'Material': '100 % Cotton',
