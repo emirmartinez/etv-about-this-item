@@ -16,7 +16,6 @@ class TabsComp extends React.Component {
 
     //Description
     const description = this.props.data.details['Description']
-    console.log(description)
     return (
       <Tabs className='tabs'>
 
@@ -36,43 +35,57 @@ class TabsComp extends React.Component {
           <div className='SpecAndDesc'>
             <div className='spec'>
               <h3>Specification</h3>
-              <div><b>Sizing:</b> {this.props.data.details['Sizing']}</div>
+              <div className="specDiv"><b>Sizing:</b> {this.props.data.details['Sizing']}</div>
               <hr></hr>
-              <div><b>Material:</b> {this.props.data.details.Material}</div>
+              <div className="specDiv"><b>Material:</b> {this.props.data.details.Material}</div>
               <hr></hr>
-              <div><b>Length:</b> {this.props.data.details.Length}</div>
+              <div className="specDiv"><b>Length:</b> {this.props.data.details.Length}</div>
               <hr></hr>
-              <div><b>Features:</b> {this.props.data.details.Features}</div>
+              <div className="specDiv"><b>Features:</b> {this.props.data.details.Features}</div>
               <hr></hr>
-              <div><b>Neckline:</b> {this.props.data.details.Neckline}</div>
+              <div className="specDiv"><b>Neckline:</b> {this.props.data.details.Neckline}</div>
               <hr></hr>
-              <div><b>Item Style:</b> {this.props.data.details['Item Style']}</div>
+              <div className="specDiv"><b>Item Style:</b> {this.props.data.details['Item Style']}</div>
               <hr></hr>
-              <div><b>Garment sleeve style:</b> {this.props.data.details['Garment sleeve style']}</div>
+              <div className="specDiv"><b>Garment sleeve style:</b> {this.props.data.details['Garment sleeve style']}</div>
               <hr></hr>
-              <div><b>Care and Cleaning:</b> {this.props.data.details['Care and Cleaning']}</div>
+              <div className="specDiv"><b>Care and Cleaning:</b> {this.props.data.details['Care and Cleaning']}</div>
               <hr></hr>
-              <div><b>CIN:</b> {this.props.data.details.TCIN}</div>
+              <div className="specDiv"><b>CIN:</b> {this.props.data.details.TCIN}</div>
               <hr></hr>
-              <div><b>UPC:</b> {this.props.data.details.UPC}</div>
+              <div className="specDiv"><b>UPC:</b> {this.props.data.details.UPC}</div>
               <hr></hr>
-              <div><b>Item Number (DPCI):</b> {this.props.data.details['Item Number (DPCI)']}</div>
+              <div className="specDiv"><b>Item Number (DPCI):</b> {this.props.data.details['Item Number (DPCI)']}</div>
               <hr></hr>
             </div>
             <div className='desc'>
               <h3>Description</h3>
               <div>{description}</div>
             </div>
+          </div>
+          <div>            
             <button className='showButton'>Show More</button>
           </div>
         </TabPanel>
 
         <TabPanel>
-          <h2>Any content 2</h2>
+          <div className='shipping'>
+          <h3>Shipping options</h3>
+          <div>{this.props.data.details['Shipping options']}</div>
+          <h3>Shipping details</h3>
+          <div>{this.props.data.details['Shipping details']}</div>
+          <h3>Return details</h3>
+          <div>{this.props.data.details['Return details']}</div>
+          </div>
+          <div>
+            <br></br>
+          </div>
         </TabPanel>
 
         <TabPanel>
-          <h2>Any content 3</h2>
+          <div>
+            <button className='questionButton'>Ask a question</button>
+          </div>
         </TabPanel>
 
       </Tabs>
