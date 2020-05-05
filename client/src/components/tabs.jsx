@@ -4,25 +4,45 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 class TabsComp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { props }
+    this.state = {
+      props,
+      1: true,
+      2: false,
+      3: false
+    }
+    this.clickHandler = this.clickHandler.bind(this)
+  }
+
+  clickHandler(e) {
+    var target = e.currentTarget.dataset.id;
+    if (target === '1') {
+      this.setState({ 1: true, 2: false, 3: false })
+    } else if (target === '2') {
+      this.setState({ 1: false, 2: true, 3: false })
+    } else if (target === '3') {
+      this.setState({ 1: false, 2: false, 3: true })
+    }
   }
 
   render() {
     //Fit & style
-    const fitStyle = this.props.data.details['Fit & style']
+    const fitStyle = this.props.data.details['Fit & style'];
     const styleItems = fitStyle.map((item) =>
       <li>{item}</li>);
-    //Specs
+    const valueOne = this.state['1'] === true ? 'red' : '';
+    const valueTwo = this.state['2'] === true ? 'red' : '';
+    const valueThree = this.state['3'] === true ? 'red' : '';
 
     //Description
-    const description = this.props.data.details['Description']
+    const description = this.props.data.details['Description'];
+
     return (
       <Tabs className='tabs'>
 
         <TabList className='tabList'>
-          <Tab>Details</Tab>
-          <Tab>Shipping & Returns</Tab>
-          <Tab>Q&A</Tab>
+          <Tab onClick={this.clickHandler} data-id="1" className={valueOne}>Details</Tab>
+          <Tab onClick={this.clickHandler} data-id="2" className={valueTwo}>Shipping & Returns</Tab>
+          <Tab onClick={this.clickHandler} data-id="3" className={valueThree}>Q&A</Tab>
         </TabList>
         <hr></hr>
 
@@ -63,19 +83,19 @@ class TabsComp extends React.Component {
               <div>{description}</div>
             </div>
           </div>
-          <div>            
+          <div>
             <button className='showButton'>Show More</button>
           </div>
         </TabPanel>
 
         <TabPanel>
           <div className='shipping'>
-          <h3>Shipping options</h3>
-          <div>{this.props.data.details['Shipping options']}</div>
-          <h3>Shipping details</h3>
-          <div>{this.props.data.details['Shipping details']}</div>
-          <h3>Return details</h3>
-          <div>{this.props.data.details['Return details']}</div>
+            <h3>Shipping options</h3>
+            <div>{this.props.data.details['Shipping options']}</div>
+            <h3>Shipping details</h3>
+            <div>{this.props.data.details['Shipping details']}</div>
+            <h3>Return details</h3>
+            <div>{this.props.data.details['Return details']}</div>
           </div>
           <div>
             <br></br>
@@ -85,6 +105,9 @@ class TabsComp extends React.Component {
         <TabPanel>
           <div>
             <button className='questionButton'>Ask a question</button>
+          </div>
+          <div>
+            <br></br>
           </div>
         </TabPanel>
 

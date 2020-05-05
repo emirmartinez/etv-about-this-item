@@ -35,6 +35,10 @@
 
 .tabList > li {
   margin: 10px;
+  /* border-bottom: 3px solid #e3002b; */
+}
+
+.red {
   border-bottom: 3px solid #e3002b;
 }
 
@@ -140,6 +144,10 @@ hr {
 }
 
 .questionButton {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
     position: relative;
     font-weight: normal;
     text-align: center;
