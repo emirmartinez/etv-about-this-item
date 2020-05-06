@@ -7,11 +7,20 @@ class Featured extends React.Component {
     this.state = { props }
   }
 
-  render () {
+  render() {
+    const pictures = this.props.data.details.Pictures
+    const picture = pictures.map((item) =>
+      <li key={item.toString()}>
+        <div>
+        <img src={item.pic} width="185" height="185" />
+        <p>{item.price}</p>
+        <p>{item.name}</p>
+        </div>
+      </li>)
     return (
-      <div>
-        <h3>pics</h3>
-      </div>
+      <ul>
+        {picture}
+      </ul>
     )
   }
 }

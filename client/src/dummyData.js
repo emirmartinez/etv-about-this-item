@@ -31,6 +31,33 @@ module.exports = {
       username: 'Steve',
       date: 4,
       answers: [{ answer: 'Yes, 1 year manufacture warranty' }]
-    }]
+    }],
+    'Pictures': [
+      {pic: `https://hr-fec-product-pictures.s3.us-east-2.amazonaws.com/sw2-black.jpg`,
+      price: "$ 12,99 ",
+      name: `Men's Star Wars The Mandalorian Short Sleeve Graphic T-Shirt - Black`,
+      color: "black"
+      },{pic: 'https://hr-fec-product-pictures.s3.us-east-2.amazonaws.com/sw2-black.jpg',
+      price: "$ 12,99 ",
+      name: `Men's Star Wars The Mandalorian Short Sleeve Graphic T-Shirt - Black`,
+      color: "black"
+      },{pic: 'https://hr-fec-product-pictures.s3.us-east-2.amazonaws.com/sw2-black.jpg',
+      price: "$ 12,99 ",
+      name: `Men's Star Wars The Mandalorian Short Sleeve Graphic T-Shirt - Black`,
+      color: "black"
+      },{pic: 'https://hr-fec-product-pictures.s3.us-east-2.amazonaws.com/sw2-black.jpg',
+      price: "$ 12,99 ",
+      name: `Men's Star Wars The Mandalorian Short Sleeve Graphic T-Shirt - Black`,
+      color: "black"
+      },{pic: 'https://hr-fec-product-pictures.s3.us-east-2.amazonaws.com/sw2-black.jpg',
+      price: "$ 12,99 ",
+      name: `Men's Star Wars The Mandalorian Short Sleeve Graphic T-Shirt - Black`,
+      color: "black"
+      },{pic: 'https://hr-fec-product-pictures.s3.us-east-2.amazonaws.com/sw2-black.jpg',
+      price: "$ 12,99 ",
+      name: `Men's Star Wars The Mandalorian Short Sleeve Graphic T-Shirt - Black`,
+      color: "black"
+      }
+    ]
   }
 }

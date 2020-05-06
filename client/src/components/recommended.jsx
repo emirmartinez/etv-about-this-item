@@ -17,7 +17,6 @@ class Recommended extends React.Component {
 
   recClickHandler(event) {
     var target = event.currentTarget.dataset.id;
-    console.log(target)
     if (target === '4') {
       this.setState({ 4: true, 5: false, 6: false })
     } else if (target === '5') {

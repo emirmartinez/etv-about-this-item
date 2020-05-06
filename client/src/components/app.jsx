@@ -18,7 +18,7 @@ class App extends React.Component {
         <h2 className='subTitle'>Recommended</h2>
         <Recommended data={this.props.data} />
         <h2 className='subTitle'>Featured Products</h2>
-        <Featured />
+        <Featured data={this.props.data} />
       </div>
     )
   }

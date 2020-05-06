@@ -15,7 +15,6 @@ class TabsComp extends React.Component {
 
   clickHandler(e) {
     var target = e.currentTarget.dataset.id;
-        console.log(target)
     if (target === '1') {
       this.setState({ 1: true, 2: false, 3: false })
     } else if (target === '2') {
@@ -29,7 +28,7 @@ class TabsComp extends React.Component {
     //Fit & style
     const fitStyle = this.props.data.details['Fit & style'];
     const styleItems = fitStyle.map((item) =>
-      <li>{item}</li>);
+      <li key={item.toString()}>{item}</li>);
     const valueOne = this.state['1'] === true ? 'red' : '';
     const valueTwo = this.state['2'] === true ? 'red' : '';
     const valueThree = this.state['3'] === true ? 'red' : '';
