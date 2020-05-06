@@ -15,6 +15,7 @@ class TabsComp extends React.Component {
 
   clickHandler(e) {
     var target = e.currentTarget.dataset.id;
+        console.log(target)
     if (target === '1') {
       this.setState({ 1: true, 2: false, 3: false })
     } else if (target === '2') {

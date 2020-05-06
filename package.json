@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "react-dev": "webpack -d --watch",
     "react-server": "live-server",
     "start": "nodemon server/index.js"
@@ -13,11 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.8.0",
     "babel-core": "^6.23.1",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.23.0",
+    "eslint": "^6.8.0",
+    "jest": "^26.0.1",
     "webpack": "^2.2.1"
   },
   "dependencies": {
