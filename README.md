@@ -10,7 +10,7 @@ Components
 About this Item 
 Provides information for current item selected. This component connects to Node.js server and fetches from MongoDB.
 
-![](About this item react component.gif)
+![](about-react-component.gif)
 
 Recommended item carousel
 Provides pictures of similar items. This component is connects to Node.js server and fetches from MongoDB.
